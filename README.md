@@ -99,12 +99,154 @@ You can add more tests in `tests/test_recommender.py`.
 Paste a sample of your recommender's output here as a text block so a reader can see what it produces:
 
 ```
-# e.g.:
-# User profile: genre=indie, mood=chill, energy=low
-# Recommendations:
-#   1. ...
-#   2. ...
-#   3. ...
+
+============================================================
+                    TOP RECOMMENDATIONS                     
+============================================================
+
+1. Sunrise City — Neon Echo
+   Score: 6.96 / 8.00
+   Reasons:
+     • Genre match (pop)
+     • Mood match (happy)
+     • Energy fit (1.96)
+
+2. Gym Hero — Max Pulse
+   Score: 4.74 / 8.00
+   Reasons:
+     • Genre match (pop)
+     • Energy fit (1.74)
+
+3. Rooftop Lights — Indigo Parade
+   Score: 3.92 / 8.00
+   Reasons:
+     • Mood match (happy)
+     • Energy fit (1.92)
+
+4. Night Drive Loop — Neon Echo
+   Score: 1.90 / 8.00
+   Reasons:
+     • Energy fit (1.90)
+
+5. Crown Jewel — King Vibe
+   Score: 1.84 / 8.00
+   Reasons:
+     • Energy fit (1.84)
+
+============================================================
+(ai110-module3show-musicrecommendersimulation-starter) 11:50 PM ai110-module3show-musicrecommendersimulation-starter (main) > 
+(ai110-module3show-musicrecommendersimulation-starter) 11:50 PM ai110-module3show-musicrecommendersimulation-starter (main) > python src/main.py
+
+============================================================
+           TOP RECOMMENDATIONS — High-Energy Pop            
+============================================================
+
+1. Sunrise City — Neon Echo
+   Score: 6.84 / 8.00
+   Reasons:
+     • Genre match (pop)
+     • Mood match (happy)
+     • Energy fit (1.84)
+
+2. Gym Hero — Max Pulse
+   Score: 4.94 / 8.00
+   Reasons:
+     • Genre match (pop)
+     • Energy fit (1.94)
+
+3. Rooftop Lights — Indigo Parade
+   Score: 3.72 / 8.00
+   Reasons:
+     • Mood match (happy)
+     • Energy fit (1.72)
+
+4. Storm Runner — Voltline
+   Score: 1.98 / 8.00
+   Reasons:
+     • Energy fit (1.98)
+
+5. Crown Jewel — King Vibe
+   Score: 1.96 / 8.00
+   Reasons:
+     • Energy fit (1.96)
+
+============================================================
+
+============================================================
+              TOP RECOMMENDATIONS — Chill Lofi              
+============================================================
+
+1. Library Rain — Paper Lanterns
+   Score: 7.90 / 8.00
+   Reasons:
+     • Genre match (lofi)
+     • Mood match (chill)
+     • Energy fit (1.90)
+     • Acoustic preference
+
+2. Midnight Coding — LoRoom
+   Score: 7.76 / 8.00
+   Reasons:
+     • Genre match (lofi)
+     • Mood match (chill)
+     • Energy fit (1.76)
+     • Acoustic preference
+
+3. Focus Flow — LoRoom
+   Score: 5.80 / 8.00
+   Reasons:
+     • Genre match (lofi)
+     • Energy fit (1.80)
+     • Acoustic preference
+
+4. Spacewalk Thoughts — Orbit Bloom
+   Score: 4.96 / 8.00
+   Reasons:
+     • Mood match (chill)
+     • Energy fit (1.96)
+     • Acoustic preference
+
+5. Moonlight Sonata Reimagined — Classical Echo
+   Score: 2.96 / 8.00
+   Reasons:
+     • Energy fit (1.96)
+     • Acoustic preference
+
+============================================================
+
+============================================================
+          TOP RECOMMENDATIONS — Deep Intense Rock           
+============================================================
+
+1. Storm Runner — Voltline
+   Score: 6.88 / 8.00
+   Reasons:
+     • Genre match (rock)
+     • Mood match (intense)
+     • Energy fit (1.88)
+
+2. Gym Hero — Max Pulse
+   Score: 3.84 / 8.00
+   Reasons:
+     • Mood match (intense)
+     • Energy fit (1.84)
+
+3. Sunrise City — Neon Echo
+   Score: 1.94 / 8.00
+   Reasons:
+     • Energy fit (1.94)
+
+4. Crown Jewel — King Vibe
+   Score: 1.94 / 8.00
+   Reasons:
+     • Energy fit (1.94)
+
+5. Thunder Strikes — Iron Fist
+   Score: 1.86 / 8.00
+   Reasons:
+     • Energy fit (1.86)
+
+============================================================
 ```
 
 **Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->

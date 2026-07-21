@@ -5,6 +5,7 @@
 Give your model a short, descriptive name.  
 Example: **VibeFinder 1.0**  
 
+VIBECODED RECOMMANDER
 ---
 
 ## 2. Intended Use  

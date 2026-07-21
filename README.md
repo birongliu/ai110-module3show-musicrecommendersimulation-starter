@@ -18,14 +18,42 @@ Replace this paragraph with your own summary of what your version does.
 ## How The System Works
 
 Explain your design in plain language.
+going with content based filtering recommandation because
+
+Real streaming platforms like Spotify and YouTube use two main strategies to predict what you'll love: collaborative filtering (finding users with similar taste and recommending what they enjoyed) and content based filtering (analyzing song attributes like energy, tempo, and mood to find similar songs to ones you like). Most platforms use a hybrid approach: collaborative filtering discovers serendipitous picks, while content-based filtering handles new songs and avoids echo chambers. will be priortizing content based filtering
+
 
 Some prompts to answer:
 
 - What features does each `Song` use in your system
   - For example: genre, mood, energy, tempo
+    id, title, artist, genre, mood, energy, tempo_bpm, valence, danceability, acousticness
 - What information does your `UserProfile` store
+  - id, username, song, favorite_genre, favorite_mood, target_energy, likes_acoustic
 - How does your `Recommender` compute a score for each song
 - How do you choose which songs to recommend
+
+### Algorithm Recipe
+
+Each song is scored against the `UserProfile` using a weighted point system. Signals
+that define taste most rigidly are worth the most points; fuzzy or nice-to-have
+signals are worth less.
+
+| Signal | Points | Rule |
+| --- | --- | --- |
+| Genre match | **+3.0** | `song.genre == user.favorite_genre` (categorical — no partial credit, so it earns the most) |
+| Mood match | **+2.0** | `song.mood == user.favorite_mood` (moods overlap emotionally, so a miss is more forgivable than genre) |
+| Energy fit | **+2.0 max** | scaled: `2.0 * (1 - abs(song.energy - user.target_energy))` — near matches earn partial credit |
+| Acoustic preference | **+1.0** | `user.likes_acoustic and song.acousticness >= 0.6` (tiebreaker) |
+
+**Maximum score = 8.0.** A Mood match is worth ⅔ of a Genre match (2.0 vs 3.0) because
+genre is a hard, categorical boundary while moods overlap. Keeping them close (3:2, not
+3:1) lets a strong mood + energy match (2.0 + 2.0 = 4.0) outrank a genre-only match (3.0),
+which is usually the more pleasing result.
+
+**Choosing recommendations:** score every song, sort by score descending, and return the
+top `k`. Each recommendation carries a short list of the reasons that earned it points,
+used to explain the pick to the user.
 
 You can include a simple diagram or bullet list if helpful.
 
@@ -117,6 +145,4 @@ Write 1 to 2 paragraphs here about what you learned:
 
 - about how recommenders turn data into predictions
 - about where bias or unfairness could show up in systems like this
-
-
 

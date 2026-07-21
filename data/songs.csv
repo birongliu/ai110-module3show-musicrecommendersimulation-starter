@@ -9,3 +9,11 @@ id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
 8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
 9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
 10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
+11,Crown Jewel,King Vibe,hip-hop,energetic,0.88,108,0.79,0.84,0.12
+12,Neon Dreams,Synth Wave,electronic,dreamy,0.72,128,0.62,0.76,0.08
+13,Whispers in the Pines,Folk Wanderer,folk,peaceful,0.38,76,0.68,0.44,0.89
+14,Island Breeze,Reggae Vibes,reggae,uplifting,0.65,96,0.81,0.68,0.52
+15,Moonlight Sonata Reimagined,Classical Echo,classical,melancholic,0.32,70,0.51,0.38,0.91
+16,Velvet Soul,R&B Dreams,r&b,soulful,0.58,92,0.74,0.62,0.28
+17,Thunder Strikes,Iron Fist,metal,aggressive,0.92,144,0.45,0.58,0.11
+18,Lonesome Highway,Country Road,country,nostalgic,0.54,104,0.66,0.55,0.68
